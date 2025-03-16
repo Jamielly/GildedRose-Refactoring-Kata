@@ -45,10 +45,10 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEqual(items[0].quality, 50)
     
     def test_sulfuras_no_change(self):
-        items = [Item("Sulfuras, Hand of Ragnaros", 5, 80)]
+        items = [Item("Sulfuras, Hand of Ragnaros", 0, 80)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
-        self.assertEqual(items[0].sell_in, 5)
+        self.assertEqual(items[0].sell_in, 0)
         self.assertEqual(items[0].quality, 80)
     
     def test_backstage_passes_increase_quality(self):
